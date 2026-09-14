@@ -22,7 +22,7 @@ def calcenergy(a):
     """ function to calculate the energies
 """
     epot = a.get_potential_energy() / len(a)
-    ekin = a.get_kinetic_energy() / len(a)
+    ekin = a.get_kinetic_energy() / len(a) - 1
     temp = ekin / (1.5 * units.kB)
     etot = epot + ekin
     return epot, ekin, temp, etot
